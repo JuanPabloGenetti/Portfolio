@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #FFFFFB;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  max-width: 100%;
+}
+
+section {
+  padding: 30vh 0;
+}
+
+.one {
+  padding-top: 5em;
+  background-color: #30305f;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  margin-bottom: -10vw;
+  z-index: 15;
+}
+
+.one h1, .one h2 {
+  font-weight: light 300;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  white-space: nowrap;
+}
+
+.one h1 {
+  font-size: 9vw;
+  letter-spacing: 4px;
+  display: block;
+  font-weight: lighter;
+}
+
+.one h2 {
+  font-size: 5vw;
+  letter-spacing: 2px;
+  margin-top: .3em;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.two {
+  background-color: red;
+  background-image: url(backround2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 10;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  margin-bottom: -10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: lighter;
+}
+
+.two h2 {
+  font-weight: lighter;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  border-radius: 2em;
+  padding: 1em;
+  bottom: 4em;
+  -webkit-animation: pulse 1500ms infinite;
+          animation: pulse 1500ms infinite;
+}
+
+.two div {
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  margin-top: 2vw;
+  margin-bottom: 5vw;
+}
+
+.two div:nth-of-type(1) {
+  background-image: url(hero1.jpg);
+  background-position: -5em -10em;
+}
+
+.two div:nth-of-type(2) {
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.two div:nth-of-type(2) p {
+  font-size: 2,5vw;
+  color: white;
+  text-align: center;
+}
+
+.two div:nth-of-type(2):hover {
+  background-color: black;
+  opacity: .8;
+  position: absolute;
+}
+
+.three {
+  background-color: #30305f;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  margin-bottom: -10vw;
+}
+
+.three .grid-container {
+  max-width: 90%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+@media (max-width: 800px) {
+  .three .grid-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.three .grid-container .card {
+  background-color: #26263f;
+  padding: 1.5em;
+  border-radius: 3em;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.three .grid-container .card :first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.three .grid-container .card :first-child span {
+  width: 1em;
+  height: 1em;
+  margin-right: 1em;
+  border-radius: 50%;
+  background-color: black;
+  opacity: .5;
+}
+
+.three .grid-container .card :nth-child(2) {
+  text-align: start;
+  padding: .5em;
+}
+
+.three .grid-container .card:nth-of-type(1) {
+  background-color: red;
+}
+
+.three .grid-container .card:nth-of-type(5) {
+  background-color: lightcoral;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.four {
+  background-color: red;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.four .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.four .contact-container .card {
+  background-color: #26263f;
+  margin: 2em;
+  border-radius: 3em;
+  padding: 1em;
+  font-weight: lighter;
+}
+
+.four .contact-container .card :first-child {
+  margin: 1em;
+}
+
+.four .contact-container .card :nth-child(2) {
+  margin: 1em;
+}
+
+.four .contact-container .card:hover {
+  -webkit-animation: pop 3000ms;
+          animation: pop 3000ms;
+}
+
+.four .return-to-top {
+  margin-top: 8em;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 60%;
+  padding: 4em;
+  border-radius: 2em;
+  font-weight: lighter;
+  -webkit-animation: pulse 2000ms infinite;
+          animation: pulse 2000ms infinite;
+}
+
+.four .return-to-top a {
+  text-decoration: none;
+  color: white;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: .5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: .5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes pop {
+  0% {
+    background-color: rgba(38, 38, 63, 0.5);
+  }
+  100% {
+    background-color: #26263f;
+  }
+}
+
+@keyframes pop {
+  0% {
+    background-color: rgba(38, 38, 63, 0.5);
+  }
+  100% {
+    background-color: #26263f;
+  }
+}
+/*# sourceMappingURL=style.css.map */
